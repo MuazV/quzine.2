@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quzine Kahvaltı Evi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav>
+    <a href="#" class="logo">
+      <span class="logo-name">Qu<em>zine</em></span>
+      <span class="logo-tag">Kahvaltı Evi</span>
+    </a>
+    <div class="nav-links">
+      <a href="#about">Hakkımızda</a>
+      <a href="#menu">Menü</a>
+      <a href="#gallery">Galeri</a>
+      <a href="#contact">İletişim</a>
+    </div>
+    <button class="nav-hamburger" aria-label="Menüyü aç">&#9776;</button>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="hero-badge">
+      <span class="stars">★★★★★</span>
+      <span>Google'da 4.9 puan</span>
+    </div>
+    <h1 class="hero-h">Sabahın <em>En İyi</em><br>Adresi</h1>
+    <p class="hero-sub">Taze malzemeler, ev yapımı lezzetler</p>
+    <p class="hero-loc">İstanbul · Her gün 08:00 – 16:00</p>
+    <div class="hero-btns">
+      <a href="#menu" class="btn-fill">Menüyü Gör</a>
+      <a href="https://wa.me/90XXXXXXXXXX" class="btn-green">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+          <path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.562 4.14 1.541 5.875L0 24l6.324-1.518A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.013-1.376l-.36-.214-3.724.894.928-3.618-.234-.372A9.818 9.818 0 1 1 12 21.818z"/>
+        </svg>
+        WhatsApp ile Rezervasyon
+      </a>
+      <a href="#about" class="btn-ghost">Hakkımızda</a>
+    </div>
+
+    <!-- ── TICKER ── -->
+    <div class="ticker-wrap">
+      <div class="ticker-track">
+        <div class="tick-img"><img src="images/img_sofra3.jpg" alt="Kahvaltı Tabağı"></div>
+        <div class="tick-img"><img src="images/img_menemen.jpg" alt="Menemen"></div>
+        <div class="tick-img"><img src="images/IMG_3255.jpg" alt="Börek"></div>
+        <div class="tick-img"><img src="images/IMG_0711.jpg" alt="Gözleme"></div>
+        <div class="tick-img"><img src="images/IMG_2812.jpg" alt="Poğaça"></div>
+        <div class="tick-img"><img src="images/IMG_3722.jpg" alt="Kabak Çiçeği"></div>
+        <div class="tick-img"><img src="images/IMG_3233.jpg" alt="Sahanda Yumurta"></div>
+        <div class="tick-img"><img src="images/img_sofra_full.jpg" alt="Sofra"></div>
+        <!-- Sonsuz scroll için tekrar -->
+        <div class="tick-img"><img src="images/img_sofra3.jpg" alt="Kahvaltı Tabağı"></div>
+        <div class="tick-img"><img src="images/img_menemen.jpg" alt="Menemen"></div>
+        <div class="tick-img"><img src="images/IMG_3255.jpg" alt="Börek"></div>
+        <div class="tick-img"><img src="images/IMG_0711.jpg" alt="Gözleme"></div>
+        <div class="tick-img"><img src="images/IMG_2812.jpg" alt="Poğaça"></div>
+        <div class="tick-img"><img src="images/IMG_3722.jpg" alt="Kabak Çiçeği"></div>
+        <div class="tick-img"><img src="images/IMG_3233.jpg" alt="Sahanda Yumurta"></div>
+        <div class="tick-img"><img src="images/img_sofra_full.jpg" alt="Sofra"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section class="sec about-sec" id="about">
+    <div class="si">
+      <p class="stag rv">Hakkımızda</p>
+      <h2 class="sh rv rv-d1">Lezzetin <em>Hikâyesi</em></h2>
+      <div class="about-grid">
+        <div class="about-text rv-l">
+          <p>2018'den bu yana İstanbul'un kalbinde, her sabah taze hazırlanan ürünlerimizle misafirlerimize en iyi kahvaltı deneyimini sunuyoruz.</p>
+          <p>Yerel üreticilerden temin ettiğimiz organik malzemeler ve nesilden nesile geçen tariflerimizle sofralarınızı şenlendiriyoruz.</p>
+          <div class="open-badge">
+            <span class="open-dot"></span>
+            <span>Bugün açık · 08:00 – 16:00</span>
+          </div>
+          <p class="pull-quote">"Sabahın en güzel anları, iyi bir kahvaltı sofrasında başlar."</p>
+        </div>
+        <div class="about-photos rv-r">
+          <div class="ap1">
+            <img src="images/img_sofra_full.jpg" alt="Kahvaltı Sofrası">
+          </div>
+          <div class="ap2">
+            <img src="images/img_juice.jpg" alt="Taze Meyve Suyu">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MENU ── -->
+  <section class="sec menu-sec" id="menu">
+    <div class="si">
+      <p class="stag rv">Menü</p>
+      <h2 class="sh rv rv-d1">Lezzetlerimiz</h2>
+      <div class="menu-layout">
+        <div class="menu-list">
+
+          <div class="mcat-section rv">
+            <p class="mcat-sub">Sabah Tabakları</p>
+            <h3 class="mcat-name">Kahvaltı Setleri</h3>
+            <ul class="menu-items">
+              <li>
+                <span>
+                  <span class="mi-name">Serpme Kahvaltı</span>
+                  <span class="mi-desc">Peynir çeşitleri, zeytin, bal, kaymak, reçel ve taze ekmek</span>
+                </span>
+                <span class="mi-price">3000 ₺</span>
+              </li>
+              <li>
+                <span>
+                  <span class="mi-name">Menemen</span>
+                  <span class="mi-desc">Domates, biber, yumurta ve baharat</span>
+                </span>
+                <span class="mi-price">120 ₺</span>
+              </li>
+              <li>
+                <span>
+                  <span class="mi-name">Sahanda Yumurta</span>
+                  <span class="mi-desc">Tereyağlı, sucuklu veya kavurmalı</span>
+                </span>
+                <span class="mi-price">95 ₺</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mcat-section rv rv-d1">
+            <p class="mcat-sub">Fırından</p>
+            <h3 class="mcat-name">Börek & Hamur İşi</h3>
+            <ul class="menu-items">
+              <li>
+                <span>
+                  <span class="mi-name">Su Böreği</span>
+                  <span class="mi-desc">Peynirli veya kıymalı, ev yapımı</span>
+                </span>
+                <span class="mi-price">85 ₺</span>
+              </li>
+              <li>
+                <span>
+                  <span class="mi-name">Gözleme</span>
+                  <span class="mi-desc">Peynir, ıspanak veya patates</span>
+                </span>
+                <span class="mi-price">75 ₺</span>
+              </li>
+              <li>
+                <span>
+                  <span class="mi-name">Poğaça</span>
+                  <span class="mi-desc">Günlük fırından çıkma</span>
+                </span>
+                <span class="mi-price">35 ₺</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mcat-section rv rv-d2">
+            <p class="mcat-sub">Sıcak & Soğuk</p>
+            <h3 class="mcat-name">İçecekler</h3>
+            <ul class="menu-items">
+              <li>
+                <span><span class="mi-name">Türk Çayı</span></span>
+                <span class="mi-price">25 ₺</span>
+              </li>
+              <li>
+                <span><span class="mi-name">Filter Kahve</span></span>
+                <span class="mi-price">65 ₺</span>
+              </li>
+              <li>
+                <span><span class="mi-name">Taze Sıkılmış Portakal Suyu</span></span>
+                <span class="mi-price">55 ₺</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Sticky foto panel -->
+        <div class="menu-photo-panel">
+          <div class="mphoto">
+            <div class="mphoto-img">
+              <img src="images/img_sofra_blue.jpg" alt="Günün Tabağı">
+            </div>
+            <span class="mphoto-label">Günün Önerisi</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── GALLERY ── -->
+  <section class="gallery-sec" id="gallery">
+    <div class="gallery-head rv">
+      <p class="stag">Galeri</p>
+      <h2 class="sh">Gözle <em>Şölen</em></h2>
+    </div>
+    <div class="gallery-masonry">
+      <div class="gcell rv">
+        <div class="gcell-inner">
+          <img src="images/IMG_0467.jpg" alt="Mekan">
+        </div>
+      </div>
+      <div class="gcell rv rv-d1">
+        <div class="gcell-inner">
+          <img src="images/IMG_1458.jpg" alt="Kahvaltı Sofrası">
+        </div>
+      </div>
+      <div class="gcell rv rv-d2">
+        <div class="gcell-inner">
+          <img src="images/IMG_0639.jpg" alt="Quzine">
+        </div>
+      </div>
+      <div class="gcell rv rv-d1">
+        <div class="gcell-inner">
+          <img src="images/img_zucchini.jpg" alt="Kabak Çiçeği Dolması">
+        </div>
+      </div>
+      <div class="gcell rv rv-d2">
+        <div class="gcell-inner">
+          <img src="images/IMG_3731.jpg" alt="Sıcak Yemekler">
+        </div>
+      </div>
+      <div class="gcell rv rv-d3">
+        <div class="gcell-inner">
+          <img src="images/IMG_0565.jpg" alt="Bahçe">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── NEWS / BASIN ── -->
+  <section class="sec news-sec" id="basin">
+    <div class="si">
+      <p class="stag rv">Basında</p>
+      <h2 class="sh rv rv-d1">Bizi Konuşuyorlar</h2>
+      <p class="news-intro rv rv-d2">Medyada yer alan haberler ve yorumlar</p>
+      <div class="news-grid">
+        <a href="#" class="news-card rv">
+          <div class="news-img">
+            <img src="images/img_sofra2.jpg" alt="Kahvaltı">
+          </div>
+          <div class="news-meta">
+            <span class="news-source">Yemek Dergisi</span>
+            <span class="news-dot">·</span>
+            <span class="news-date">Mart 2025</span>
+          </div>
+          <h3 class="news-title">İstanbul'un En İyi Kahvaltı Mekânları</h3>
+          <p class="news-excerpt">Şehrin dört bir yanındaki kahvaltı noktaları arasında Quzine, özgün lezzetleriyle öne çıkıyor.</p>
+          <span class="news-arrow">Haberi oku →</span>
+        </a>
+        <a href="#" class="news-card rv rv-d1">
+          <div class="news-img">
+            <img src="images/IMG_3276.jpg" alt="Taze Meyve Suyu">
+          </div>
+          <div class="news-meta">
+            <span class="news-source">Gurme Rehberi</span>
+            <span class="news-dot">·</span>
+            <span class="news-date">Ocak 2025</span>
+          </div>
+          <h3 class="news-title">Organik ve Yerel: Yeni Nesil Kahvaltı</h3>
+          <p class="news-excerpt">Yerel üreticilerle çalışan restoranlar arasında Quzine, sürdürülebilir yaklaşımıyla dikkat çekiyor.</p>
+          <span class="news-arrow">Haberi oku →</span>
+        </a>
+        <a href="#" class="news-card rv rv-d2">
+          <div class="news-img">
+            <img src="images/IMG_3731.jpg" alt="Lezzetler">
+          </div>
+          <div class="news-meta">
+            <span class="news-source">Şehir Rehberi</span>
+            <span class="news-dot">·</span>
+            <span class="news-date">Kasım 2024</span>
+          </div>
+          <h3 class="news-title">Hafta Sonu Kahvaltı Rotaları</h3>
+          <p class="news-excerpt">Uzun ve keyifli bir hafta sonu kahvaltısı için en doğru adres olarak öneriliyor.</p>
+          <span class="news-arrow">Haberi oku →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section class="sec contact-sec" id="contact">
+    <div class="si">
+      <p class="stag rv">İletişim</p>
+      <h2 class="sh rv rv-d1">Bize Ulaşın</h2>
+      <div class="contact-grid">
+
+        <div class="rv-l">
+          <div class="ci">
+            <div class="ci-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="ci-lbl">Adres</p>
+              <p class="ci-val">Örnek Mah. Lezzet Sok. No:1<br>Beşiktaş / İstanbul</p>
+            </div>
+          </div>
+          <div class="ci">
+            <div class="ci-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.27 21 3 13.73 3 4.5a1 1 0 011-1H8a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.71 2.7z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="ci-lbl">Telefon</p>
+              <p class="ci-val"><a href="tel:+902121234567">+90 212 123 45 67</a></p>
+            </div>
+          </div>
+          <div class="ci">
+            <div class="ci-icon">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <div>
+              <p class="ci-lbl">Çalışma Saatleri</p>
+              <p class="ci-val">Her gün 08:00 – 16:00</p>
+            </div>
+          </div>
+          <a href="https://wa.me/90XXXXXXXXXX" class="wa-block">
+            <div class="wa-ico">
+              <svg viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.562 4.14 1.541 5.875L0 24l6.324-1.518A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.013-1.376l-.36-.214-3.724.894.928-3.618-.234-.372A9.818 9.818 0 1 1 12 21.818z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="wa-main">WhatsApp ile Rezervasyon</p>
+              <p class="wa-hint">Hızlı yanıt · 7/24</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="rv-r">
+          <div class="map-wrap">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3009!2d29.0!3d41.05!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zQmXFn2lrdGHFnw!5e0!3m2!1str!2str!4v1234567890"
+              allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          <p class="map-addr">Örnek Mah. Lezzet Sok. No:1, Beşiktaş / İstanbul</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="ft">
+      <div class="ft-top">
+        <div>
+          <div class="ft-logo">Qu<em>zine</em></div>
+          <p class="ft-slogan">Kahvaltı Evi</p>
+          <p class="ft-hours">
+            Pazartesi – Cuma: 08:00 – 16:00<br>
+            Cumartesi – Pazar: 08:00 – 17:00
+          </p>
+        </div>
+        <div>
+          <p class="ft-col-t">Sayfalar</p>
+          <ul class="ft-links">
+            <li><a href="#about">Hakkımızda</a></li>
+            <li><a href="#menu">Menü</a></li>
+            <li><a href="#gallery">Galeri</a></li>
+            <li><a href="#basin">Basında</a></li>
+            <li><a href="#contact">İletişim</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="ft-col-t">Sosyal Medya</p>
+          <ul class="ft-links">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Google Maps</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="ft-bot">
+        <span class="ft-copy">© 2025 Quzine Kahvaltı Evi. Tüm hakları saklıdır.</span>
+        <div class="ft-ig"><a href="#">@quzine.istanbul</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="quzine.js"></script>
+</body>
+</html>
