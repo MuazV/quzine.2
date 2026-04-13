@@ -1,9 +1,5 @@
 /* ============================================================
-   Quzine Kahvaltı Evi — quzine.css
-   Kullanım: <link rel="stylesheet" href="quzine.css">
-   Google Fonts bağlantısını HTML <head> içinde bırakın:
-   https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1
-   &family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600
+   Quzine Kahvaltı Evi — style.css
    ============================================================ */
 
 /* ── RESET & TOKENS ── */
@@ -22,6 +18,7 @@
   --accent:  #C8392B;
   --wa:      #25D366;
   --white:   #FDFAF4;
+  --nav-h:   68px;
 }
 
 html {
@@ -52,11 +49,12 @@ nav {
   top: 0;
   width: 100%;
   z-index: 200;
-  padding: 18px 56px;
+  height: var(--nav-h);
+  padding: 0 48px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(245, 240, 232, 0.94);
+  background: rgba(245, 240, 232, 0.95);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(26, 22, 20, 0.07);
 }
@@ -64,36 +62,21 @@ nav {
 /* Logo */
 .logo {
   text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
+  display: block;
+  flex-shrink: 0;
 }
 
-.logo-name {
-  font-family: 'Instrument Serif', serif;
-  font-size: 26px;
-  color: var(--black);
-  letter-spacing: -0.5px;
-  line-height: 1;
-}
-
-.logo-name em {
-  color: var(--accent);
-  font-style: italic;
-}
-
-.logo-tag {
-  font-size: 8.5px;
-  letter-spacing: 3.5px;
-  text-transform: uppercase;
-  color: var(--gray);
+.logo-img {
+  height: 46px;
+  width: auto;
+  display: block;
 }
 
 /* Nav links */
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 28px;
 }
 
 .nav-hamburger {
@@ -106,6 +89,7 @@ nav {
   color: var(--black);
   text-decoration: none;
   transition: color 0.2s;
+  white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -115,7 +99,7 @@ nav {
 /* ── HERO ── */
 .hero {
   min-height: 100vh;
-  padding: 130px 56px 60px;
+  padding: calc(var(--nav-h) + 60px) 56px 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -146,8 +130,8 @@ nav {
 
 .hero-h {
   font-family: 'Instrument Serif', serif;
-  font-size: clamp(58px, 8.5vw, 114px);
-  line-height: 0.9;
+  font-size: clamp(52px, 7.5vw, 104px);
+  line-height: 0.92;
   letter-spacing: -2.5px;
   margin-bottom: 24px;
   opacity: 0;
@@ -160,7 +144,7 @@ nav {
 }
 
 .hero-sub {
-  font-size: 17px;
+  font-size: 16px;
   color: var(--gray);
   font-weight: 300;
   margin-bottom: 10px;
@@ -169,18 +153,18 @@ nav {
 }
 
 .hero-loc {
-  font-size: 11px;
-  letter-spacing: 3.5px;
+  font-size: 10.5px;
+  letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--lgray);
-  margin-bottom: 44px;
+  margin-bottom: 40px;
   opacity: 0;
   animation: up 0.5s 0.36s forwards;
 }
 
 .hero-btns {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   justify-content: center;
   flex-wrap: wrap;
   opacity: 0;
@@ -192,11 +176,12 @@ nav {
   background: var(--black);
   color: var(--white);
   text-decoration: none;
-  padding: 15px 34px;
+  padding: 14px 28px;
   border-radius: 100px;
   font-size: 14px;
   font-weight: 600;
   display: inline-block;
+  white-space: nowrap;
   transition: background 0.2s, transform 0.15s;
 }
 
@@ -209,13 +194,14 @@ nav {
   background: var(--wa);
   color: #fff;
   text-decoration: none;
-  padding: 15px 34px;
+  padding: 14px 24px;
   border-radius: 100px;
   font-size: 14px;
   font-weight: 600;
   display: inline-flex;
   align-items: center;
   gap: 7px;
+  white-space: nowrap;
   transition: opacity 0.2s, transform 0.15s;
 }
 
@@ -227,12 +213,13 @@ nav {
 .btn-ghost {
   color: var(--black);
   text-decoration: none;
-  padding: 14px 34px;
+  padding: 13px 28px;
   border-radius: 100px;
   font-size: 14px;
   font-weight: 500;
   border: 1.5px solid rgba(26, 22, 20, 0.22);
   display: inline-block;
+  white-space: nowrap;
   transition: border-color 0.2s, transform 0.15s;
 }
 
@@ -245,7 +232,9 @@ nav {
 .ticker-wrap {
   overflow: hidden;
   padding: 28px 0;
-  margin-top: 64px;
+  margin-top: 56px;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
   border-top: 1px solid rgba(26, 22, 20, 0.1);
   border-bottom: 1px solid rgba(26, 22, 20, 0.1);
   opacity: 0;
@@ -256,7 +245,7 @@ nav {
   display: flex;
   gap: 14px;
   width: max-content;
-  animation: ticker 28s linear infinite;
+  animation: ticker 32s linear infinite;
 }
 
 .ticker-track:hover {
@@ -272,15 +261,18 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Instrument Serif', serif;
-  font-style: italic;
-  color: rgba(255, 255, 255, 0.25);
-  font-size: 12px;
   transition: transform 0.4s;
 }
 
 .tick-img:hover {
   transform: scale(1.04);
+}
+
+.tick-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* ── GENEL BÖLÜMLER ── */
@@ -430,8 +422,13 @@ nav {
   text-align: center;
 }
 
-.ap1 .ph { background: linear-gradient(145deg, #b08060, #705040); }
-.ap2 .ph { background: linear-gradient(145deg, #7aaa6a, #4a7a3a); }
+.ap1 img, .ap2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 18px;
+}
 
 /* ── MENU ── */
 .menu-sec { background: var(--bg); }
@@ -465,7 +462,6 @@ nav {
   font-size: 9.5px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--lgray);
   margin-bottom: 20px;
 }
 
@@ -511,7 +507,7 @@ nav {
 /* Sticky photo panel */
 .menu-photo-panel {
   position: sticky;
-  top: 100px;
+  top: calc(var(--nav-h) + 24px);
   height: fit-content;
 }
 
@@ -532,10 +528,13 @@ nav {
   align-items: center;
   justify-content: center;
   transition: opacity 0.4s;
-  font-family: 'Instrument Serif', serif;
-  font-style: italic;
-  color: rgba(255,255,255,.25);
-  font-size: 16px;
+}
+
+.mphoto-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .mphoto-label {
@@ -581,13 +580,18 @@ nav {
   align-items: center;
   justify-content: center;
   transition: transform 0.5s cubic-bezier(.16,1,.3,1);
-  font-family: 'Instrument Serif', serif;
-  font-style: italic;
-  color: rgba(255,255,255,.15);
-  font-size: 13px;
+  overflow: hidden;
 }
 
-.gcell:hover .gcell-inner { transform: scale(1.07); }
+.gcell-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(.16,1,.3,1);
+}
+
+.gcell:hover .gcell-inner img { transform: scale(1.07); }
 
 /* ── BASIN / NEWS ── */
 .news-sec { background: var(--white); }
@@ -619,11 +623,17 @@ nav {
   border-radius: 16px;
   overflow: hidden;
   margin-bottom: 20px;
+}
+
+.news-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
   transition: transform 0.4s cubic-bezier(.16,1,.3,1);
 }
 
-.news-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.news-card:hover .news-img { transform: scale(1.02); }
+.news-card:hover .news-img img { transform: scale(1.04); }
 
 .news-meta {
   display: flex;
@@ -799,11 +809,14 @@ footer { background: var(--black); padding: 68px 56px 36px; }
 
 /* ── Tablet (≤900px) ── */
 @media (max-width: 900px) {
-  nav { padding: 14px 24px; }
+  :root { --nav-h: 62px; }
+
+  nav { padding: 0 24px; }
   .nav-links { gap: 18px; }
   .nav-links a { font-size: 13px; }
+  .logo-img { height: 40px; }
 
-  .hero { padding: 110px 24px 50px; }
+  .hero { padding: calc(var(--nav-h) + 48px) 24px 50px; }
   .hero-h { font-size: clamp(44px, 10vw, 72px); letter-spacing: -1.5px; }
   .hero-sub { font-size: 15px; }
   .hero-loc { font-size: 10px; letter-spacing: 2.5px; }
@@ -827,11 +840,15 @@ footer { background: var(--black); padding: 68px 56px 36px; }
 
 /* ── Mobil (≤640px) ── */
 @media (max-width: 640px) {
-  nav { padding: 12px 18px; }
+  :root { --nav-h: 58px; }
+
+  nav { padding: 0 16px; }
+  .logo-img { height: 36px; }
+
   .nav-links {
     display: none;
     position: fixed;
-    top: 62px;
+    top: var(--nav-h);
     left: 0; right: 0;
     background: rgba(245,240,232,0.97);
     backdrop-filter: blur(16px);
@@ -844,19 +861,30 @@ footer { background: var(--black); padding: 68px 56px 36px; }
   .nav-links.open { display: flex; }
   .nav-hamburger { display: block; }
 
-  .hero { padding: 90px 20px 44px; min-height: 100svh; }
+  .hero {
+    padding: calc(var(--nav-h) + 36px) 20px 44px;
+    min-height: 100svh;
+  }
   .hero-badge { font-size: 12px; padding: 6px 14px; }
-  .hero-h { font-size: clamp(40px, 12vw, 58px); line-height: .92; letter-spacing: -1px; margin-bottom: 18px; }
-  .hero-sub { font-size: 14px; margin-bottom: 8px; }
-  .hero-loc { font-size: 9.5px; letter-spacing: 2px; margin-bottom: 32px; }
-  .hero-btns { gap: 10px; flex-direction: column; align-items: center; width: 100%; }
+  .hero-h { font-size: clamp(38px, 11vw, 54px); line-height: .92; letter-spacing: -1px; margin-bottom: 18px; }
+  .hero-sub { font-size: 13px; margin-bottom: 8px; }
+  .hero-loc { font-size: 9px; letter-spacing: 2px; margin-bottom: 28px; }
+  .hero-btns {
+    gap: 8px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
   .btn-fill, .btn-green, .btn-ghost {
-    width: 100%; max-width: 320px;
-    text-align: center; justify-content: center;
-    padding: 15px 24px; font-size: 15px;
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    justify-content: center;
+    padding: 14px 20px;
+    font-size: 14px;
   }
 
-  .ticker-wrap { margin-top: 36px; padding: 18px 0; }
+  .ticker-wrap { margin-top: 32px; padding: 16px 0; }
   .tick-img { width: 150px; height: 105px; }
 
   .sec { padding: 56px 20px; }
@@ -868,56 +896,4 @@ footer { background: var(--black); padding: 68px 56px 36px; }
 
   .ft-top { grid-template-columns: 1fr; gap: 28px; }
   .ft-bot { flex-direction: column; gap: 10px; text-align: center; }
-}
-
-/* ── GÖRSEL DÜZELTMELERİ ── */
-
-/* Ticker images */
-.tick-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border-radius: 14px;
-}
-
-/* About photos */
-.ap1, .ap2 {
-  background: none;
-}
-.ap1 img, .ap2 img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border-radius: 18px;
-}
-
-/* Menu sticky photo panel */
-.mphoto-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* Gallery cells */
-.gcell-inner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* News card images */
-.news-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border-radius: 16px;
-  transition: transform 0.4s cubic-bezier(.16,1,.3,1);
-}
-.news-card:hover .news-img img {
-  transform: scale(1.04);
 }
